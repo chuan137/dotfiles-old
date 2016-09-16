@@ -6,10 +6,8 @@
 
 - link:
     ~/.bashrc: rc/bashrc.ubuntu
-    ~/.dotfiles: ''
     ~/.gitconfig: rc/gitconfig
     ~/.inputrc: rc/inputrc
-    ~/.tmux.conf: tmux.conf
     ~/.vim: rc/vim
     ~/.vimrc: rc/vimrc.vundle
     ~/.xsessionrc: rc/xsessionrc
