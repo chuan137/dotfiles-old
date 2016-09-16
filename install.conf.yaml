@@ -10,7 +10,7 @@
     ~/.gitconfig: rc/gitconfig
     ~/.inputrc: rc/inputrc
     ~/.tmux.conf: tmux.conf
-    ~/.vim: vim
+    ~/.vim: rc/vim
     ~/.vimrc: rc/vimrc.vundle
     ~/.xsessionrc: rc/xsessionrc
     ~/.z: lib/z
