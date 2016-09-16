@@ -1,0 +1,21 @@
+[alias]
+  st = status
+  gcat = cat-file -p
+  lg = log --color --graph --pretty=format:'%Cgreen%ad%Creset %C(yellow)%h%Creset -%C(auto)%d%Creset %s %C(cyan)[%an] %C(green)(%cr)%Creset' --abbrev-commit --date=short
+  all = log --color --graph --pretty=format:'%Cgreen%ad%Creset %C(yellow)%h%Creset -%C(auto)%d%Creset %s %C(cyan)[%an] %C(green)(%cr)%Creset' --abbrev-commit --date=short --all
+  graph = log --graph --oneline --decorate --first-parent
+  alll = log --graph --decorate --oneline --all --first-parent
+  ck = checkout
+  br = branch
+  amend = !EDITOR=: git commit --amend
+  rename = "!f() { git push origin origin/$1:refs/heads/$2 :$1; } ; f"
+[user]
+	name = Chuan Miao
+	email = chuan137@gmail.com
+[push]
+	default = simple
+[giggle]
+	main-window-maximized = false
+	main-window-geometry = 960x1021+1920+24
+	history-view-vpane-position = 697
+	file-view-vpane-position = 659

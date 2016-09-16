@@ -1,0 +1,5 @@
+xinput set-prop 10 139 0
+xinput set-prop 10 139 1
+xinput set-prop 10 275 180 -180
+xinput set-prop "TPPS/2 IBM TrackPoint" 263 0.6
+xinput set-prop "TPPS/2 IBM TrackPoint" 264 2

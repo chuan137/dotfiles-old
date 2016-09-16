@@ -1,0 +1,9 @@
+[submodule "lib/dotbot"]
+	path = lib/dotbot
+	url = https://github.com/anishathalye/dotbot
+[submodule "lib/z"]
+	path = lib/z
+	url = https://github.com/rupa/z.git
+[submodule "vim/bundle/Vundle.vim"]
+	path = vim/bundle/Vundle.vim
+	url = https://github.com/VundleVim/Vundle.vim.git
