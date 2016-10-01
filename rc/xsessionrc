@@ -1,5 +1,6 @@
-xinput set-prop "SynPS/2 Synaptics TouchPad" 139 0
-xinput set-prop "SynPS/2 Synaptics TouchPad" 139 1
-xinput set-prop "SynPS/2 Synaptics TouchPad" 275 180 -180
-xinput set-prop "TPPS/2 IBM TrackPoint" 263 0.6
-xinput set-prop "TPPS/2 IBM TrackPoint" 264 2
+xinput set-prop "SynPS/2 Synaptics TouchPad" "Device Enabled" 0
+xinput set-prop "SynPS/2 Synaptics TouchPad" "Device Enabled" 1
+xinput set-prop "SynPS/2 Synaptics TouchPad" "Synaptics Edge Scrolling" 1 1 0
+#xinput set-prop "SynPS/2 Synaptics TouchPad" 275 180 180
+xinput set-prop "TPPS/2 IBM TrackPoint" "Device Accel Constant Deceleration" 0.35
+xinput set-prop "TPPS/2 IBM TrackPoint" "Device Accel Adaptive Deceleration" 2

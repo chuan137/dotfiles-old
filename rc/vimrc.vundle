@@ -1,7 +1,10 @@
 syntax on
 filetype plugin on    " enable ftplugin scripts
 filetype indent on    " enable filetype specific indent scripts
-colorscheme molokai
+
+set t_Co=256
+colorscheme sweater
+" colorscheme molokai
 
 "{{{ minimal
 set nocompatible      " be iMproved
@@ -31,7 +34,7 @@ set wildignore+=*/node_modules/*,*/tmp/*,*/errors/*
 "}}}
 "{{{ mappings
 nnoremap ; : 
-nnoremap <leader>w  :w<CR>
+nnoremap <leader>w  :w!<CR>
 nnoremap <leader>g  :e#<CR>
 nnoremap <silent><Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
 " xnoremap <leader>j x<esc>EP
@@ -61,7 +64,7 @@ endif
 " colorscheme molokai
 " "}}}
  
-"{{{  Vundle 
+"{{{ >>> VUNDLE <<< 
 filetype off
 set nocompatible               " be improved
 set runtimepath+=~/.vim/bundle/Vundle.vim
@@ -71,13 +74,38 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tomtom/tcomment_vim'
+Plugin 'tpope/vim-surround'
+
+" autocomplete and snippets
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'SirVer/ultisnips'
+
+" Web
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
+Plugin 'elzr/vim-json'
+Plugin 'alvan/vim-closetag'
+
+" Python
+Plugin 'scrooloose/syntastic'
+Plugin 'nvie/vim-flake8'
+Plugin 'tmhedberg/SimpylFold'
+Plugin 'vim-scripts/indentpython.vim'
+
+" Code Browsing
+Plugin 'mileszs/ack.vim'
+Plugin 'airblade/vim-rooter'
+" 'commandT'
+" 'lusty explorer'
+" ctags vs cscope
 
 call vundle#end()            " required
 filetype plugin indent on    " required
 "}}}
+
 "{{{ >>> ctrlp.vim >>>
 let g:ctrlp_working_path_mode = 'ra'
-let g:ctrlp_by_filename = 1
+" let g:ctrlp_by_filename = 1
 let g:ctrlp_max_files = 600
 let g:ctrlp_max_depth = 5
 let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
@@ -86,10 +114,9 @@ let g:ctrlp_extensions = ['buffertag', 'dir']
 let g:ctrlp_cmd = 'call CallCtrlP()'
 
 nnoremap <Leader>f :CtrlP<CR>
-nnoremap <Leader>t :CtrlPBufTag<CR>
+nnoremap <Leader>t :CtrlPTag<CR>
 
 func! CallCtrlP()
-  wincmd J
   if exists('s:called_ctrlp')
     CtrlPLastMode
   else
@@ -103,4 +130,19 @@ let g:AutoPirsFlyMode=1
 let g:AutoPairsShortcutBackInsert = '<C-b>' 
 let g:AutoPairsShortcutFastWrap = '<C-f>'
 let g:AutoPairsShortcutJump = '<C-j>'
+"}}}
+"{{{ >>> Web Programming >>>
+let g:jsx_ext_required = 0
+let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.xml,*.js,*.jsx"
+"}}}
+"{{{ >>> PYTHON >>>
+let python_highlight_all = 1
+let g:SimpylFold_docstring_preview=1
+syntax on
+"}}}
+"{{{ >>> Code Browsing >>>
+let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+nmap <leader>a :tab split<CR>:Ack ""<left>
+nmap <leader>A :tab split<CR>:Ack <C-r><C-w><CR>
+let g:rooter_patterns = ['Rakefile', '.git/']
 "}}}

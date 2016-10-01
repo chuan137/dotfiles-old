@@ -7,10 +7,13 @@
 - link:
     ~/.bashrc: rc/bashrc.ubuntu
     ~/.gitconfig: rc/gitconfig
+    ~/.config/i3: rc/i3
     ~/.inputrc: rc/inputrc
+    ~/.pythonrc: rc/pythonrc
     ~/.vim: rc/vim
     ~/.vimrc: rc/vimrc.vundle
     ~/.xsessionrc: rc/xsessionrc
+    ~/.Xresources: rc/xresources
     ~/.z: lib/z
 
 - shell:

@@ -2,6 +2,8 @@
   st = status
   gcat = cat-file -p
   lg = log --color --graph --pretty=format:'%Cgreen%ad%Creset %C(yellow)%h%Creset -%C(auto)%d%Creset %s %C(cyan)[%an] %C(green)(%cr)%Creset' --abbrev-commit --date=short
+  lm-pretty = log --pretty=format:'%s%n   by %C(yellow)%an%Creset (%ad)%n %n%b' --date=local
+  lm = log --pretty=format:'%s%n'
   all = log --color --graph --pretty=format:'%Cgreen%ad%Creset %C(yellow)%h%Creset -%C(auto)%d%Creset %s %C(cyan)[%an] %C(green)(%cr)%Creset' --abbrev-commit --date=short --all
   graph = log --graph --oneline --decorate --first-parent
   alll = log --graph --decorate --oneline --all --first-parent
