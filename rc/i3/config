@@ -172,8 +172,8 @@ bindsym $mod+Tab workspace next
 # window
 assign [class="firefox"] workspace 1
 
-bindsym $mod+bracketright workspace next
-bindsym $mod+bracketleft workspace prev
+bindsym $mod+Next workspace next
+bindsym $mod+Prior workspace prev
 
 exec --no-startup-id xautolock -time 10 -locker 'i3lock -d -c 000000'
 
