@@ -1,4 +1,14 @@
+export EDITOR=vim
 export PATH=$HOME/bin:$PATH
 
 alias ..='cd ..'
 alias ...='cd ../..'
+
+# z
+export _Z_DATA=$HOME/.zdata
+source $HOME/.z/z.sh
+alias zc='z -c' #sub-directory
+alias zt='z -t' #recent visited
+alias zr='z -r' #ranking
+
+
