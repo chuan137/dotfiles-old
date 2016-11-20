@@ -31,6 +31,8 @@ set wildmode=longest:full,full
 set wildignore=*.o,*.obj,*~ 
 set wildignore+=*.so,*.swp,*.zip
 set wildignore+=*/node_modules/*,*/tmp/*,*/errors/*
+" ensure webpack changes fire on save
+set backupcopy=yes
 "}}}
 "{{{ mappings
 nnoremap ; : 
