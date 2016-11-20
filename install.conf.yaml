@@ -8,6 +8,7 @@
     ~/.bashrc: rc/bashrc.ubuntu
     ~/.gitconfig: rc/gitconfig
     ~/.config/i3: rc/i3
+    ~/bin/i3exit: bin/i3exit
     ~/.inputrc: rc/inputrc
     ~/.pythonrc: rc/pythonrc
     ~/.vim: rc/vim
