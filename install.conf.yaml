@@ -6,6 +6,7 @@
 
 - link:
     ~/.bashrc: rc/bashrc.ubuntu
+    ~/.bash_aliases: rc/bash_aliases
     ~/.gitconfig: rc/gitconfig
     ~/.config/i3: rc/i3
     ~/bin/i3exit: bin/i3exit
