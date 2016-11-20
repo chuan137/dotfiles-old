@@ -1,6 +1,6 @@
 #!/bin/sh
 lock() {
-    i3lock -c 343434 -n
+    i3lock -c 343434 -e
 }
 
 case "$1" in
@@ -11,10 +11,10 @@ case "$1" in
         i3-msg exit
         ;;
     suspend)
-        lock && systemctl suspend
+        lock && sudo pm-suspend #systemctl suspend
         ;;
     hibernate)
-        lock && systemctl hibernate
+        lock && sudo pm-hibernate #systemctl hibernate
         ;;
     reboot)
         systemctl reboot
